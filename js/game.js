@@ -2,45 +2,109 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "farm.gif",
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "Your on a farm and you want potatos",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Walk to the Farmer",
+                    nextLevel: "Farm",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Walk to the dog",
+                    nextLevel: "Dead",
                 },
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
+        Farm: {
+            background_image: "forest.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You have permission find potatos!",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Speak to the farmer",
+                    nextLevel: "Produce",
+                },
+                {
+                    text: "Look around",
+                    nextLevel: "Dead",
+                },
+            ]
+        },
+Produce: {
+            background_image: "produce.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "Ask kindly to see potatos",
+            choices: [
+                {
+                    text: "Ask to see produce",
+                    nextLevel: "vegetables",
+                },
+                {
+                    text: "Demand to see potatos",
+                    nextLevel: "Dead",
+                },
+            ]
+        },
+   vegetables: {
+            background_image: "source.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "What was a potato again?",
+            choices: [
+                {
+                    text: "talk to vegetables",
+                    nextLevel: "OnePotato",
+                },
+                {
+                    text: "talk to fruits",
+                    nextLevel: "Dead",
+                },
+            ]
+        },
+       OnePotato: {
+            background_image: "giphy.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You want to get as many as possible**FLASH WARNING**",
+            choices: [
+                {
+                    text: "Ask to many potatos",
+                    nextLevel: "DancingPotato",
+                },
+                {
+                    text: "Demand to see leader",
+                    nextLevel: "Dead",
+                },
+            ]
+        },
+       DancingPotato: {
+            background_image: "dancing_potatos.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You Won magic potatos!",
+            choices: [
+                {
+                    text: "You Won",
+                    nextLevel: "start",
+                },
+             
+            ]
+        },
+        
+  
+        Dead: {
+             background_image: "shaving_potatos.gif",
+            message: "You have been turned into a potaot who shaved himself",
+            choices: [
+                {
+                    text: "you have basically died",
                     nextLevel: "start",
                 },
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
-        },
 
     }
 };
